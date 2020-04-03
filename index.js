@@ -33,6 +33,7 @@ async function generate() {
   pkg.app = {
     title: "Web Site"
   }
+  pkg.scripts = config.scripts
   pkg.eslintConfig = config.eslintConfig
   pkg.stylelint = config.stylelint
 
