@@ -1,4 +1,4 @@
-# create-web-site
+# create-minimal-webpack-app
 
 A minimal site generator using [Webpack][] and friends.
 
@@ -29,16 +29,16 @@ A minimal site generator using [Webpack][] and friends.
 
 With Yarn:
 
-    yarn create web-site your-web-site-name
+    yarn create minimal-webpack-app your-app-name
 
 With NPM:
 
-    npm install create-web-site
-    create-web-site your-web-site-name
+    npm install create-minimal-webpack-app
+    create-minimal-webpack-app your-app-name
 
 You'll get an application directory with the following contents:
 
-    your-web-site-name
+    your-app-name
     ├── index.html
     ├── package.json
     ├── public

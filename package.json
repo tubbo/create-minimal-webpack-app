@@ -1,5 +1,5 @@
 {
-  "name": "create-web-site",
+  "name": "create-minimal-webpack-app",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -46,7 +46,7 @@
     "test": "rm -rf tmp && ./index.js tmp && test -e tmp/src/index.js"
   },
   "bin": {
-    "create-web-site": "./index.js"
+    "create-minimal-webpack-app": "./index.js"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
