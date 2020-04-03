@@ -42,7 +42,8 @@
   },
   "scripts": {
     "start": "./index.js",
-    "lint": "eslint src/**/*.js && stylelint src/**/*.css"
+    "lint": "eslint src/**/*.js && stylelint src/**/*.css",
+    "test": "rm -rf tmp && ./index.js tmp && test -e tmp/src/index.js"
   },
   "bin": {
     "create-web-site": "./index.js"
