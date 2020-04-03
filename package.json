@@ -1,0 +1,56 @@
+{
+  "name": "create-web-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "keyword-spacing": [
+        "error",
+        {
+          "before": true
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ],
+      "eqeqeq": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-recommended"
+  },
+  "scripts": {
+    "start": "./index.js",
+    "lint": "eslint src/**/*.js && stylelint src/**/*.css"
+  },
+  "bin": {
+    "create-web-site": "./index.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "stylelint": "^13.3.0",
+    "stylelint-config-recommended": "^3.0.0"
+  }
+}
