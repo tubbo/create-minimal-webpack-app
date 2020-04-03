@@ -24,7 +24,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin(Object.assign(config.countdown, { template })),
+    new HtmlWebpackPlugin(Object.assign(config.app, { template })),
     new MiniCssExtractPlugin({ file: 'main.css' })
   ]
 }

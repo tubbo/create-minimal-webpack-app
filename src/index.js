@@ -1,3 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+import "./index.css"
+
+document.addEventListener("DOMContentLoaded", () => {
   // DOM ready code goes here
 })

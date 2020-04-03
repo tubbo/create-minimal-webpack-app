@@ -9,6 +9,7 @@ module.exports = {
     'style-loader',
     'stylelint',
     'stylelint-config-recommended',
+    'surge',
     'url-loader',
     'webpack',
     'webpack-cli',
@@ -17,7 +18,7 @@ module.exports = {
   scripts: {
     "build": "webpack --mode production",
     "start": "webpack-dev-server",
-    "deploy": "yarn build && surge -p ./dist -d bloody-woman.surge.sh",
+    "deploy": "yarn build && surge -p ./dist",
     "lint": "eslint src/**/*.js && stylelint src/**/*.css"
   },
   eslintConfig: {
