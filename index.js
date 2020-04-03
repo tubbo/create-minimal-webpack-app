@@ -37,11 +37,13 @@ async function generate() {
   pkg.stylelint = config.stylelint
 
   fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2))
-  copy('.gitignore')
+  fs.writeFileSync('.gitignore', "node_modules\ndist")
+
   copy('index.html')
   copy('index.js', 'src/index.js')
   copy('index.css', 'src/index.css')
   copy('webpack.config.js')
+
   // add favicon
   copy('favicon.ico', 'public/favicon.ico')
   copy('android-chrome-192x192.png', 'public/android-chrome-192x192.png')
@@ -49,6 +51,7 @@ async function generate() {
   copy('favicon-16x16.png', 'public/favicon-16x16.png')
   copy('favicon-32x32.png', 'public/favicon-32x32.png')
   copy('site.webmanifest', 'public/site.webmanifest')
+
 }
 
 generate()
