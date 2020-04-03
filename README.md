@@ -5,25 +5,29 @@ A minimal site generator using [Webpack][] and friends.
 ## Features
 
 - **HTML::** The `index.html` file is generated and automatically
-  includes Webpack CSS/JS bundles. It also can optionally include
-  configured data passed down from `package.json`
-- **CSS:** Your CSS is run through the Webpack pipeline for processing,
-  and extracted to a `main.css` file for inclusion in the browser.
+  includes Webpack CSS/JS bundles using the [HTML Webpack Plugin][].
+  It also can optionally include configured data passed down from `package.json`.
+- **CSS:** The [CSS Loader][] allows you to `import` CSS files in your
+  JavaScript when needed. This CSS is compiled together and extracted to
+  a `main.css` file by way of the [Mini CSS Extract Plugin][].
 - **JavaScript:** No need to worry about compatibility in browsers, your
   code will be transpiled from ES2015 into something they can
-  understand.
-- **Assets:** Webpack is configured to load image/font assets as URLs,
-  so you can use them in your JS/CSS with ease. Additionally, the
-  `public/` directory is populated with favicons and other files that
-  are served statically.
+  understand. [Webpack][] installs and configures [Babel][] for you.
+- **Assets:** The [URL Loader][] is installed for loading image/font
+  assets as URLs, so you can use them in your JS/CSS with ease.
+  Additionally, the `public/` directory is populated with favicons and
+  other files that are served statically.
 - **Linting:** [ESLint][] and [Stylelint][] are automatically configured
   with recommended JS/CSS settings, and some additional helper rules.
   This can be found in the `package.json` for later editing.
 - **Development:** [Webpack Dev Server][] is installed so you can get to
   coding right away. It automatically reloads modules that change,
   so you can see changes without needing to refresh.
-- **Deployment:** The `yarn deploy` task starts you off right, building
-  your app and deploying the `dist/` directory to [Surge][].
+- **Deployment:** The `yarn deploy` task builds your app and deploys the
+  `dist/` directory to [Surge][]. It's meant as a starting point, but
+  Surge is a great hosting provider so there's no shame in keeping the
+  default!  Just make sure you add a `-d YOUR_DOMAIN` to the end so you
+  don't get a random `*.surge.sh` domain each time you deploy.
 
 ## Usage
 
@@ -113,3 +117,8 @@ Read it out using EJS tags:
 [Stylelint]: https://stylelint.org
 [Webpack Dev Server]: https://webpack.js.org/configuration/dev-server/
 [Surge]: https://surge.sh
+[HTML Webpack Plugin]: https://webpack.js.org/plugins/html-webpack-plugin/
+[Mini CSS Extract Plugin]: https://webpack.js.org/plugins/mini-css-extract-plugin/
+[Babel]: https://babeljs.io/
+[URL Loader]: https://webpack.js.org/loaders/url-loader/
+[CSS Loader]: https://webpack.js.org/loaders/css-loader/
