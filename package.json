@@ -43,7 +43,7 @@
   "scripts": {
     "start": "./index.js",
     "lint": "eslint src/**/*.js && stylelint src/**/*.css",
-    "test": "rm -rf tmp && ./index.js tmp && test -e tmp/src/index.js"
+    "test": "jest"
   },
   "bin": {
     "create-minimal-webpack-app": "./index.js"
