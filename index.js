@@ -56,3 +56,4 @@ async function generate() {
 }
 
 generate()
+module.exports = generate
